@@ -1,7 +1,7 @@
 library(forecast)
 
 read_data = function(file){
-  return(read.csv(file,header = F))
+  return(read.csv(file))
 }
 
 ts_decompose = function(data,fre=0){

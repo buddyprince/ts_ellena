@@ -38,12 +38,16 @@ shinyUI(dashboardPage(
             fluidRow(
               box(title = "Control", status = "primary", solidHeader = T, width = 12,
                   sliderInput(inputId = "slider_1",
-                              label = "Please choose period of data:",
-                              value = 6,
-                              min = 1,
-                              max = 100,
+                              label = "Please choose period of data: 0 for auto",
+                              value = 0,
+                              min = 0,
+                              max = 10,
                               step = 1
-                  )
+                  ),
+                  selectInput(inputId = "select_1",
+                              label = "Please select the columns of data",
+                              choices = c("Item A", "Item B", "Item C")
+                              )
               )
             ),
             
